@@ -7,6 +7,7 @@ def index():
     # Baseline intro screen
     return "Hello, World!"
 
-@app.route('/santa', methods=['GET'])
-def santa():
-    return request.data
+@app.route('/santa/<int:santa_id>')
+def santa(santa_id):
+    # Get santa_id and find data to fill in app
+    return str(santa_id)
